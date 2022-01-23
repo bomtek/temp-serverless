@@ -17,11 +17,11 @@ const fetchData = async() => {
         />
         <div class="info">
           <h5>${name}</h5>
-          <h5 class="price">$${price}</h5>
+          <h5 class="price"> $${price}</h5>
         </div>
       </article> `
 
-    })
+    }).join("")
     console.log(products);
 
     result.innerHTML = products.join("")
