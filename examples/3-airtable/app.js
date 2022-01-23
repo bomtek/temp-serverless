@@ -4,7 +4,7 @@ const fetchProduct = async() => {
 
    try {
         const data = await axios.get('/api/3-airtable');
-        console.log(data);
+    
         
         const products = data.map((product) =>{
         console.log(product)
@@ -22,7 +22,7 @@ const fetchProduct = async() => {
         }).join("")
         result.innerHTML = products;
     } catch (error) {
-        result.innerHTML = `${error}`
+        result.innerHTML = `Error from  frontend${error}`
     }
 
 }

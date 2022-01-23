@@ -36,7 +36,7 @@ exports.handler = async(event,context,cb) => {
     } catch (error) {
         return {
             statusCode: 500,
-            body:`This is the error${error}`
+            body:`Error from backend${error}`
         }
     }
 
