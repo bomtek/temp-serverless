@@ -3,11 +3,12 @@ const result = document.querySelector('.result')
 const fetchProduct = async() => {
 
    try {
-        const data = await axios.get('/api/3-airtable');
-    
+        const {data} = await axios.get('/api/3-airtable');
+        console.log(data);
+
         
         const products = data.map((product) =>{
-        console.log(product)
+    
         const {id,url,name,price} = product;
         
         return ` <a href="product.html?id=${id}&" class="product">
