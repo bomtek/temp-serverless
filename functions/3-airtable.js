@@ -13,6 +13,7 @@ exports.handler = async(event,context,cb) => {
     try {
         const {records} = await airtable.list();
         
+        
         const products = records.map((product) => {
            
         
@@ -35,7 +36,7 @@ exports.handler = async(event,context,cb) => {
     } catch (error) {
         return {
             statusCode: 500,
-            body:`${error}`
+            body:`This is the error${error}`
         }
     }
 
