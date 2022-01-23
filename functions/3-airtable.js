@@ -17,18 +17,17 @@ exports.handler = async(event,context,cb) => {
            
         
             const {id} = product;
-            const{image,name,price} = product.fields;
+            const{name,price,image} = product.fields;
             const {url} = image[0];
+            console.log(id,name,url,price)
             return {id,url,name,price}
          
-        
-            
-            
-            
         })
          
         return {
-            
+            headers: {
+            'Access-Control-Allow-Origin':"*"
+            },
             statusCode:200,
             body: JSON.stringify(products)
         }
@@ -36,7 +35,7 @@ exports.handler = async(event,context,cb) => {
     } catch (error) {
         return {
             statusCode: 500,
-            body:`Server Error`
+            body:`${error}`
         }
     }
 
