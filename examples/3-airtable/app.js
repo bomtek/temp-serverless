@@ -3,7 +3,7 @@ const result = document.querySelector('.result')
 const fetchProduct = async() => {
 
    try {
-        const {data} = await axios.get('/api/3-airtable');
+        const data= await axios.get('/api/3-airtable');
         console.log(data);
 
         
