@@ -18,7 +18,7 @@ exports.handler = async(event,context,cb) => {
         
             const {id} = product;
             const{image,name,price} = product.fields;
-            const {url} = image[0].url;
+            const {url} = image[0];
             return {id,url,name,price}
          
         

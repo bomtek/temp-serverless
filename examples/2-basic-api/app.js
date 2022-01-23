@@ -5,6 +5,7 @@ const fetchData = async() => {
     try{
 
     const {data} = await axios.get('/api/2-basic-api');
+    console.log(data)
 
     const products = data.map((product) => {
 
@@ -24,11 +25,11 @@ const fetchData = async() => {
     }).join("")
     console.log(products);
 
-    result.innerHTML = products.join("")
+    result.innerHTML = products
 }catch(error){
 
 
-    result.innerHTML = `<h4> Therre was an error  </h4>`
+    result.innerHTML =`${error}`
 }
 
 
